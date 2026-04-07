@@ -1,0 +1,20 @@
+- params:
+    git:
+      repoName: Abhinavcha/gradle
+      branches:
+        - main
+
+    scan:
+      projects:
+
+        # ===============================
+        # Android (Gradle dependencies)
+        # ===============================
+        - installCommand: "./gradlew dependencies"
+          workingDirs:
+            - "."
+          pathExclusions:
+            - "**/.gradle/**"
+            - "**/build/**"
+            - "**/.idea/**"
+            - "**/*.iml"
